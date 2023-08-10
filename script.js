@@ -4,7 +4,7 @@ const tl = gsap.timeline()
 function time(){
     let a = 0
     setInterval(function() {
-        a += ~~(Math.random()*20)
+        a += ~~(Math.random()*25)
         if(a < 100){
         document.querySelector("#loader h2").innerHTML = a + "%"
         } else{
@@ -15,7 +15,6 @@ function time(){
 }
 
 tl.to("#loader h2",{
-    delay: 0.5,
     duration: 1,
     onStart: time()
 })
@@ -109,8 +108,8 @@ gsap.from(".figure-1",{
         scroller:"body",
         // markers: true,
         start: "top 60%",
-        scrub: 1,
-        end: "top 8%"
+        scrub: 2,
+        end: "top 40%"
     }
 })
 
@@ -124,9 +123,9 @@ gsap.from(".figure-2",{
         trigger:".figure-2",
         scroller:"body",
         // markers: true,
-        start: "top 70%",
-        scrub: 1,
-        end: "top 15%"
+        start: "top 60%",
+        scrub: 2,
+        end: "top 40%"
     }
 })
 
@@ -138,10 +137,10 @@ gsap.from(".figure-3",{
     scrollTrigger:{
         trigger:".figure-3",
         scroller:"body",
-        // markers: true,
-        start: "top 90%",
-        scrub: 1,
-        end: "top 30%"
+        // markers:true,
+        start: "top 120%",
+        scrub: 2,
+        end: "top 50%"
     }
 })
 
@@ -155,7 +154,7 @@ gsap.from(".figure-4",{
         scroller:"body",
         // markers: true,
         start: "top 40%",
-        scrub: 1,
+        scrub: 2,
         end: "top -10%",
     }
 })
@@ -171,7 +170,7 @@ gsap.from(".figure-5",{
         scroller:"body",
         // markers: true,
         start: "top 150%",
-        scrub: 1,
+        scrub: 2,
         end: "top 60%",
     }
 })

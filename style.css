@@ -26,7 +26,7 @@ body{
     justify-content: center;
 height: 100vh;
 width: 100%;
-background-color: lightblue;
+background-color: #F3E9DC;
 position: fixed;
 z-index: 999;
 color: black;
@@ -188,8 +188,7 @@ scale: 1.2;
 .pages-container{
     display: flex;
     flex-direction: column;
-    background-color: red;
-    gap: 1px;
+    /* background-color: red; */
 }
 
 .page{
@@ -198,6 +197,7 @@ scale: 1.2;
     align-items: center;
     background-color: rgb(224, 213, 213);
     height: 100vh;
+    overflow: hidden;
 }
 
 /* Figure 1 */
@@ -227,7 +227,7 @@ letter-spacing: 3px;
 font-weight: 100;
 color: #b9b9b9;
 padding: .5em .5em;
-font-size: clamp(6px, 1.4vw , 14px);
+font-size: clamp(8px, 1.4vw , 14px);
 }
 
 .middle-line{
@@ -554,7 +554,8 @@ nav ul {
 }
 
 nav h1{
-    
+    white-space: nowrap;
+    margin-left: 50px;
 }
 }
 
