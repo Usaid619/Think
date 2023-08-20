@@ -100,9 +100,9 @@ gsap.to(".introduction h2",{
         trigger:".introduction",
         scroller: "body",
         scrub: 2,
-        // markers: true,
+        markers: true,
         start: "top 0",
-        end: "top -200%",
+        end: "top -400%",
         pin: true,
     }
 })
