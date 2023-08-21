@@ -273,6 +273,7 @@ border-bottom: 1px solid white;
     width: 570px;
     background-color: black;
     border-radius: 10px; 
+    cursor: pointer;
     overflow: hidden;
     /* z-index: -2; */
 }
@@ -841,7 +842,7 @@ footer{
     order: 1;
     /* background-color: pink; */
     height: auto;
-    padding: 5px;
+    padding: 5px 5px 0px 5px;
 }
 
 .footer-right{
@@ -1021,17 +1022,22 @@ footer{
 
      /* Figure-5 */
     .happy{
-        top: 30%;
-        left: 2%;
-        width: 80px;
-        font-size: 10px;
+        top: 35%;
+        left: 0;
+        width: 120px;
+        font-size: 8px;
     }
     
     .working{
-        top: 30%;
-        right: -2%;
-        width: 80px;
-        font-size: 10px;
+        top: 35%;
+        right: 0;
+        width: 130px;
+        font-size: 8px;
+    }
+
+    div.circle.quote{
+        font-size: 8px;
+        line-height: 10px;
     }
     
 }
