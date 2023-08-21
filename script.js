@@ -255,7 +255,7 @@ function animateF1(){
             ease: "bounce"
         })
     
-        f1.from(".reality,.imagination,.problems",{
+        f1.from(".problems,.reality,.imagination",{
             duration: .8,
             delay: .2,
             stagger:1.3,
