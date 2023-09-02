@@ -36,7 +36,7 @@
         ease:"bounce"
     })
     
-    tl.from("nav > h1",{
+    tl.from("nav > h1 > a",{
         opacity:0,
         duration: .6,
         ease:"ease"
@@ -273,25 +273,25 @@ function animateF2(){
             opacity: 0,
             delay: .5,
             duration: 1,
-            stagger: 1
+            stagger: .6
         })
     
         f2.from(".small-line-1",{
             yPercent: 2000,
             xPercent: -25,
             opacity: 0,
-            duration: 1
+            duration: .6
         })
         
         f2.from(".small-line-2",{
             yPercent: 2000,
-            xPercent: 27,
+            xPercent: 23,
             opacity: 0,
-            duration: 1
+            duration: .6
         })
     
         f2.from(".small-line-3",{
-            yPercent: 2000,
+            yPercent: 1000,
             opacity: 0,
             duration: 1
         })
@@ -311,29 +311,18 @@ function animateF3(){
         f3.from(".line-down",{
             height: 0,
             transformOrigin: "left",
-            duration: 1.5
+            duration: 1
         })
 
-        f3.from(".box-1",{
+        f3.from(".box-1,.box-2",{
             opacity:0,
             width:0,
-            duration: 1.5
+            duration: 1
         })
 
-        f3.from(".box-1",{
+        f3.from(".box-1,.box-2",{
             height: 0,
-            duration: 1.5
-        })
-
-        f3.from(".box-2",{
-            opacity:0,
-            width:0,
-            duration: 1.5
-        })
-
-        f3.from(".box-2",{
-            height: 0,
-            duration: 1.5
+            duration: 1
         })
 
         f3.from(".if-you,.do-not-try,.try",{
@@ -348,7 +337,6 @@ function animateF4(){
 f4.from(".human",{
     opacity: 0,
     scale: 0,
-    stagger: 1.3,
     duration: 1.4
 })
 
@@ -392,21 +380,14 @@ if(!isAnimating){
     
         f6.from(".options-line",{
             scale:0,
-            rotate: 360,
+            rotation: 720,
             duration: 1.5,
         })
 
-        f6.from(".circle",{
-            scale:0,
-            duration:1.4,
-            ease: "bounce"
-        })
-        
-        
         f6.from(".before",{
             scale: 0,
-            stagger: .1,
-            duration: .6,
+            stagger: .05,
+            duration: .9,
             delay: .2
         })
         

@@ -37,23 +37,21 @@ body{
     width: 6px;
   }
   
-  /* Track */
   ::-webkit-scrollbar-track {
     background: #000000;
   }
   
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #7e7d7d;
     border-radius: 8px;
   }
   
-  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
   
 
+  /* Loader */
 #loader{
     display: flex;
     align-items: center;
@@ -75,45 +73,46 @@ color: black;
     font-size: 10vw;
 }
 
+/* Landing Page */
 .landing-page{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    /* border: 1px solid red; */
     background-color: #111111;
 }
 
+/* Navigation */
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 55px;
     padding: .6em 3.5em;
-    /* background-color: pink; */
     border-bottom: 1px solid white;
 }
 
 nav > h3 > a{
 color: white;
 padding: .5em 3em .5em .5em;
-font-size: clamp(16px,2vw,64px);
+font-size: clamp(16px,2vw,60px);
 font-weight: 100;
 text-decoration: none;
 border-right: 1px solid white;
 letter-spacing: 3px;
 }
 
-nav > h1{
+nav > h1 > a{
     margin-left: 1.3em;
     font-size: clamp(13px,2.3vw,72px);
     letter-spacing: 2px;
+    text-decoration: none;
+    color: inherit;
 }
 
 nav > ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: red; */
     gap: 20px;
     list-style: none;
     padding: .5em;
@@ -138,7 +137,6 @@ border-bottom: 1px solid white;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* border: 1px solid blue; */
     flex: 1;
 }
 
@@ -191,24 +189,20 @@ border-bottom: 1px solid white;
     object-fit: cover;
     height: 30%;
     width: 25%;
-    /* filter: blur(1px); */
 }
 
 .image-5{
     top: 10%;
     left: 25%;
 }
-
 .image-6{
     bottom: 10%;
     right: 25%;
 }
-
 .image-7{
     bottom: 10%;
     left: 5%;
 }
-
 .image-8{
     top: 10%;
     right: 5%;
@@ -228,6 +222,7 @@ border-bottom: 1px solid white;
     letter-spacing: 2px;
 }
 
+/* Introduction Page */
 .introduction{
     display: flex;
     align-items: center;
@@ -242,14 +237,12 @@ border-bottom: 1px solid white;
     padding-left: 100px;
     font-family: slider;
     font-stretch: ultra-expanded;
-    /* font-weight: 999; */
-    /* overflow: hidden; */
 }
 
+/* Pages-Container */
 .pages-container{
     display: flex;
     flex-direction: column;
-    /* background-color: red; */
 }
 
 .page{
@@ -262,7 +255,6 @@ border-bottom: 1px solid white;
 }
 
 /* Figure 1 */
-
 .illustration{
     display: flex;
     flex-direction: column;
@@ -275,14 +267,12 @@ border-bottom: 1px solid white;
     border-radius: 10px; 
     cursor: pointer;
     overflow: hidden;
-    /* z-index: -2; */
 }
 
 .quote{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: red; */
 text-transform: uppercase;
 text-align: center;
 text-wrap: balance;
@@ -293,7 +283,7 @@ line-height: 20px;
 font-weight: 999;
 color: #b9b9b9;
 padding: .5em .5em;
-font-size: clamp(12px, 1.4vw , 18px);
+font-size: clamp(12px, 1.4vw , 16px);
 }
 
 .middle-line{
@@ -333,7 +323,6 @@ font-size: clamp(12px, 1.4vw , 18px);
     transform: translate(-50%,0);
 }
 
-
 /* Figure 2 */
 .small-line{
     position: absolute;
@@ -364,7 +353,6 @@ font-size: clamp(12px, 1.4vw , 18px);
     transform: translate(0,-64.4%);
     transform-origin: left;
 }
-
 
 .line{
     position: absolute;
@@ -398,14 +386,13 @@ font-size: clamp(12px, 1.4vw , 18px);
     position: absolute;
     bottom: 24%;
     left: 50%;
-    /* background-color: red; */
     transform: translate(-50%, -24%);
 }
 
 /* Figure 3 */
 .line-down{
     position: absolute;
-    top: 30%;
+    top: 29.8%;
     left: 50%;
     transform: translate(-50%,-30%);
 width: 1px;
@@ -487,7 +474,7 @@ border-right: 1px solid #f9f9f9;
     font-size: clamp(14px,1vw,40px);
 }
 
-/* Figure-4 */
+/* Figure 4 */
 .top-image-section,.bottom-image-section{
     position: relative;
     display: flex;
@@ -502,7 +489,6 @@ overflow: hidden;
 }
 
 .top-image-section > i,.bottom-image-section > i{
-    /* background-color: red; */
     z-index: 2;
 }
 
@@ -515,7 +501,6 @@ overflow: hidden;
     width: 90%;
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
-    /* top: 5%; */
     bottom: 10%;
 }
 
@@ -536,7 +521,6 @@ overflow: hidden;
     border-radius: 50%;
 }
 
-
 .bottom-square-1{
     display: flex;
     justify-content: center;
@@ -546,7 +530,6 @@ overflow: hidden;
     left: -50%;
     height: 100%;
     width: 100%;
-    /* background-color: blue; */
 }
 
 .bottom-square-2{
@@ -558,7 +541,6 @@ overflow: hidden;
     right: -50%;
     height: 100%;
     width: 100%;
-    /* background-color: blue; */
 }
 
 .speak{
@@ -571,17 +553,14 @@ bottom: 52%;
     bottom: 2%;
 }
 
-/* Figure-5 */
-
+/* Figure 5 */
 .half-circle-div{
     position: relative;
     height: 36.3636364%;
     width: 72.7272727%;
     background: linear-gradient(to right, #000000e8,#000000af, #00000000);
     overflow: hidden;
-    /* border: 1px solid white; */
     margin-top: 110px;
-    /* transform: translateY(60px); */
 }
 
 .half-circle{
@@ -606,17 +585,15 @@ bottom: 52%;
 .working{
     position: absolute;
     top: 30%;
-    right: -2%;
+    right: 2%;
     width: 200px;
     font-size: 13px;
 }
 
-/* Figure-6 */
-
+/* Figure 6 */
 .top-container,.bottom-container{
     display: flex;
     justify-content: center;
-/* background-color: blue; */
 height: 50%;
 width: 100%;
 }
@@ -628,7 +605,6 @@ width: 100%;
     position: relative;
     height: 100%;
     width: 50%;
-    /* background-color: pink; */
 }
 
 .circle{
@@ -660,13 +636,11 @@ width: 100%;
 }
 
 .top-container .before, .bottom-container .before{
-/* color: rgba(255, 255, 255, 0.315); */
 cursor: pointer;
 width: 15%;
 height: 2100%;
 border-radius: 50%;
 transition: all .2s ease;
-/* background-color: rgba(255, 255, 255, 0.493); */
 }
 
 .bottom-container .before{
@@ -676,7 +650,6 @@ transition: all .2s ease;
 .bottom-container .options-line:nth-child(11) >.before{
     color: rgb(255, 255, 255);
 }
-
 
 /* footer */
 footer{
@@ -695,7 +668,6 @@ footer{
     position: relative;
     height: 100%;
     width: 40%;
-/* background-color: red; */
 aspect-ratio: 1 / 1;
 }
 
@@ -704,13 +676,8 @@ aspect-ratio: 1 / 1;
 }
 
 .arrow-div{
-    /* position: absolute;
-    bottom: 10%;
-    left: 20%; */
     height: 330px;
     width: 330px;
-    /* transform: translate(-20%,10%); */
-    /* background-color: red; */
 }
 
 .top-arrow{
@@ -753,20 +720,17 @@ aspect-ratio: 1 / 1;
     height: 100%;
     width: 60%;
     padding: 3%;
-    /* background-color: lightblue; */
 }
 
 .footer-info{
     display: flex;
     flex-direction: column;
     gap: 40px;
-/* background-color: pink; */
 }
 
 .info{
     font-size: clamp(16px, 2vw + 1rem, 28px);
 max-width: 70%;
-/* background-color: saddlebrown; */
 }
 
 .contact > h4{
@@ -788,16 +752,10 @@ max-width: 70%;
     color: #929191;
 }
 
-.footer-socials{
-    /* padding: 20px 0; */
-    /* background-color: darkblue; */
-}
-
 .footer-socials > ul{
     display: inline-flex;
     align-items: center;
     gap: 50px;
-    /* background-color: blue; */
 }
 
 .footer-socials > ul > li{
@@ -812,7 +770,6 @@ max-width: 70%;
 }
 
 /* Media Queries */
-
 @media all and (max-width:952px){
 nav ul {
     display: none;
@@ -835,12 +792,10 @@ footer{
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* background-color: lightblue; */
 }
 
 .footer-left{
     order: 1;
-    /* background-color: pink; */
     height: auto;
     padding: 5px 5px 0px 5px;
 }
@@ -852,7 +807,6 @@ footer{
 .arrow-div{
     height: 200px;
     width: 200px;
-    /* background-color: blue; */
 }
 
 .top-arrow > i{
@@ -883,14 +837,11 @@ footer{
 }
 
 .footer-socials{
-    /* background-color: red; */
-    /* margin: 0; */
     padding: 4px;
 }
 } 
 
 @media all and (max-width:594px){
-
     .arrow-div{
         height: 200px;
         width: 200px;
@@ -944,6 +895,14 @@ footer{
        transform: translateY(8px);
     }
 
+    .speak{
+        top: 43%;
+    }
+
+    .listen{
+        bottom: 0;
+    }
+
     /* Figure-5 */
     .happy{
         top: 33%;
@@ -960,6 +919,7 @@ footer{
     }
     
 }
+
 @media all and (max-width: 365px){
     .illustration{
       height: 250px;
