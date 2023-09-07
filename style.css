@@ -98,6 +98,7 @@ body{
     position: fixed;
     z-index: 999;
     color: black;
+    padding: 20px;
 }
 
 .loader-text-container{
@@ -114,7 +115,7 @@ overflow: hidden;
 
 .loader-text-container > h2{
     /* background-color: red; */
-    font-size: clamp(60px,5vw,72px);
+    font-size: clamp(30px,5vw,72px);
     transform: translateY(134%) rotate(15deg);
 }
 
@@ -959,7 +960,7 @@ footer{
     
     .working{
         top: 33%;
-        right: -2%;
+        right: 2%;
         width: 150px;
         font-size: 10px;
     }

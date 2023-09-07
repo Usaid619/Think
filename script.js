@@ -621,4 +621,6 @@ scaleCursor()
 
 window.addEventListener("mousemove",updateCursor)
 
-
+if(window.matchMedia('(max-width:956px)').matches){
+    cursorFollower.style.display = "none"
+}
