@@ -479,7 +479,6 @@ function updateCursor(e){
     let y = e.clientY
     let cursorHeight = window.getComputedStyle(cursorFollower).getPropertyValue("height").replace("px","")
     let cursorWidth = window.getComputedStyle(cursorFollower).getPropertyValue("width").replace("px","")
-     
     cursorFollower.style.left = `${x - cursorWidth/2}px`
     cursorFollower.style.top = `${y - cursorHeight/2}px`
 }
@@ -616,11 +615,23 @@ data.prevY = e.clientY
 data.prevTimeStamp = e.timeStamp
 
 })
+
+window.addEventListener("mouseout",()=>{
+    cursorFollower.style.transform = `scale(1,1)`
+})
 }
 scaleCursor()
 
 window.addEventListener("mousemove",updateCursor)
 
-if(window.matchMedia('(max-width:956px)').matches){
+function toggleCursor(){
+    console.log("lol")
+    if(window.matchMedia('(max-width:956px)').matches){
     cursorFollower.style.display = "none"
+} else{
+    cursorFollower.style.display = "initial"
 }
+}
+
+window.addEventListener("resize",toggleCursor)
+
