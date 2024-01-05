@@ -62,14 +62,17 @@ body{
     color: black;
     position: fixed;
     border-radius: 50%;
-    top: 92%;
-    left: 50%;
     transform: translate(-50%,0);
     font-weight: 800;
     pointer-events: none;
     mix-blend-mode: difference;
     z-index: 998;
+    opacity:0;
     transition: top .04s linear, left .04s linear, height .2s linear, width .2s linear;
+  }
+
+  body:hover .cursor-follower{
+  opacity:1
   }
   
   .cursor-follower:before{
@@ -278,7 +281,7 @@ border-bottom: 1px solid white;
     align-items: center;
     white-space: nowrap;
     height: 103vh;
-    font-size: 30vw;
+    font-size: 26vw;
     background-color: black;
     overflow: hidden;
 }

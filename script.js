@@ -1,7 +1,8 @@
 // GSAP ANIMATIONS
 (function() {
+    // Landing Page Animations
     const tl = gsap.timeline()
-
+     
     tl.to("#loader-text",{
         y: 0,
         duration:1.1,
@@ -9,56 +10,47 @@
         rotate:0,
         ease: "ease-out"
     })
-
     tl.from("#loader-text > span",{
         opacity:0,
         duration: .4,
         ease:"linear"
     })
-
-    
     tl.to("#loader",{
         top: "-100vh",
         delay: 0.6,
         duration: 2,
         ease: Expo.easeInOut
-    })
-    
+    })    
     tl.from("nav",{
         x:"-100%",
         opacity:0,
         duration:1.2,
         ease: "ease"
-    })
-    
+    })    
     tl.from("nav > h3",{
         x: -100,
         duration: .5,
         opacity:0,
         ease:"ease"
-    })
-    
+    })    
     tl.from("nav > ul > li",{
         x:"100%",
         duration: .5,
         opacity:0,
         stagger:.2,
         ease:"bounce"
-    })
-    
+    })    
     tl.from("nav > h1 > a",{
         opacity:0,
         duration: .6,
         ease:"ease"
-    })
-    
+    })    
     tl.from(".title",{
         scale:0,
         opacity:0,
         duration: .5,
         ease:"ease"
-    })
-    
+    })    
     tl.from(".title > .second, .title > .first",{
         y: -10,
         transform: "rotateX(90deg)",
@@ -66,144 +58,138 @@
         duration: .9,
         stagger: .5,
         ease:"ease"
-    })
-    
+    })    
     tl.from(".hero-image",{
         opacity:0,
         scale:0,
         duration:1,
         stagger:.3
-    })
-    
+    })    
     tl.from(".big-hero-image",{
         opacity:0,
         scale:0,
         duration:1,
         stagger:.3
-    })
-    
+    })    
     tl.from(".prompt",{
         scale:0,
         opacity:0,
-    })
-    
+    })  
     tl.to(".prompt",{
         y: 20,
         repeat: -1,
         duration:0.7,
         yoyo: true,
     })
+
+    // Illustrations Animations
+    gsap.to(".introduction h2",{
+        x: "-100%",
+        fontWeight: 100,
+        scrollTrigger:{
+            trigger:".introduction",
+            scroller: "body",
+            scrub: 2,
+            // markers: true,
+            start: "top 0",
+            end: "top -400%",
+            pin: true,
+        }
+    })
+    
+    gsap.from(".figure-1",{
+        opacity:0,
+        x:-200,
+        delay:.3,
+        duration: 1,
+        scrollTrigger:{
+            trigger:".figure-1",
+            scroller:"body",
+            // markers: true,
+            start: "top 60%",
+            scrub: 2,
+            end: "top 40%",
+     
+        }
+    })
+    
+    gsap.from(".figure-2",{
+        opacity:0,
+        x: 200,
+        delay:.3,
+        duration: 1,
+        scrollTrigger:{
+            trigger:".figure-2",
+            scroller:"body",
+            // markers: true,
+            start: "top 60%",
+            scrub: 2,
+            end: "top 40%"
+        }
+    })
+    
+    gsap.from(".figure-3",{
+        opacity:0,
+        y: 200,
+        delay:.3,
+        duration: 1,
+        scrollTrigger:{
+            trigger:".figure-3",
+            scroller:"body",
+            // markers:true,
+            start: "top 120%",
+            scrub: 2,
+            end: "top 50%"
+        }
+    })
+    
+    gsap.from(".figure-4",{
+        opacity:0,
+        y: -200,
+        delay:.3,
+        duration: 1,
+        scrollTrigger:{
+            trigger:".figure-4",
+            scroller:"body",
+            // markers: true,
+            start: "top 40%",
+            scrub: 2,
+            end: "top -10%",
+        }
+    })
+    
+    gsap.from(".figure-5",{
+        scale:0,
+        rotate:180,
+        opacity:0,
+        delay:.3,
+        duration: 1,
+        scrollTrigger:{
+            trigger:".figure-5",
+            scroller:"body",
+            // markers: true,
+            start: "top 150%",
+            scrub: 2,
+            end: "top 60%",
+        }
+    })
+    
+    gsap.from(".figure-6",{
+        opacity:0,
+        scale:2,
+        duration:1,
+        scrollTrigger:{
+            trigger: ".figure-6",
+            scroller: "body",
+            // markers:true,
+            scrub:2,
+            start: "30% 60%",
+            end: "30% 25%"
+        }
+    }) 
 })()
 
 const cursorFollower = document.querySelector(".cursor-follower")
-
-
-gsap.to(".introduction h2",{
-    x: "-100%",
-    fontWeight: 100,
-    scrollTrigger:{
-        trigger:".introduction",
-        scroller: "body",
-        scrub: 2,
-        // markers: true,
-        start: "top 0",
-        end: "top -400%",
-        pin: true,
-    }
-})
-
-gsap.from(".figure-1",{
-    opacity:0,
-    x:-200,
-    delay:.3,
-    duration: 1,
-    scrollTrigger:{
-        trigger:".figure-1",
-        scroller:"body",
-        // markers: true,
-        start: "top 60%",
-        scrub: 2,
-        end: "top 40%",
- 
-    }
-})
-
-gsap.from(".figure-2",{
-    opacity:0,
-    x: 200,
-    delay:.3,
-    duration: 1,
-    scrollTrigger:{
-        trigger:".figure-2",
-        scroller:"body",
-        // markers: true,
-        start: "top 60%",
-        scrub: 2,
-        end: "top 40%"
-    }
-})
-
-gsap.from(".figure-3",{
-    opacity:0,
-    y: 200,
-    delay:.3,
-    duration: 1,
-    scrollTrigger:{
-        trigger:".figure-3",
-        scroller:"body",
-        // markers:true,
-        start: "top 120%",
-        scrub: 2,
-        end: "top 50%"
-    }
-})
-
-gsap.from(".figure-4",{
-    opacity:0,
-    y: -200,
-    delay:.3,
-    duration: 1,
-    scrollTrigger:{
-        trigger:".figure-4",
-        scroller:"body",
-        // markers: true,
-        start: "top 40%",
-        scrub: 2,
-        end: "top -10%",
-    }
-})
-
-gsap.from(".figure-5",{
-    scale:0,
-    rotate:180,
-    opacity:0,
-    delay:.3,
-    duration: 1,
-    scrollTrigger:{
-        trigger:".figure-5",
-        scroller:"body",
-        // markers: true,
-        start: "top 150%",
-        scrub: 2,
-        end: "top 60%",
-    }
-})
-
-gsap.from(".figure-6",{
-    opacity:0,
-    scale:2,
-    duration:1,
-    scrollTrigger:{
-        trigger: ".figure-6",
-        scroller: "body",
-        // markers:true,
-        scrub:2,
-        start: "30% 60%",
-        end: "30% 25%"
-    }
-})
-
-// Illustrations Animations
 
 // Creating Flag
 let isAnimating = "false"
@@ -475,12 +461,10 @@ let isHovering = false
 
 // Making Functions and Adding Event Listeners
 function updateCursor(e){
-    let x = e.clientX
-    let y = e.clientY
-    let cursorHeight = window.getComputedStyle(cursorFollower).getPropertyValue("height").replace("px","")
-    let cursorWidth = window.getComputedStyle(cursorFollower).getPropertyValue("width").replace("px","")
-    cursorFollower.style.left = `${x - cursorWidth/2}px`
-    cursorFollower.style.top = `${y - cursorHeight/2}px`
+    let x = e.clientX - cursorFollower.offsetHeight / 2
+    let y = e.clientY - cursorFollower.offsetHeight / 2
+    cursorFollower.style.left = `${x}px`
+    cursorFollower.style.top = `${y}px`
 }
 
 function hideAction(){
