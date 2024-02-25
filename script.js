@@ -192,53 +192,109 @@
 const cursorFollower = document.querySelector(".cursor-follower")
 
 // Creating Flag
-let isAnimating = "false"
+let isAnimating = false
+let lastCard = null
 
 // Creating Seperate Timelines
 const f1 = gsap.timeline({
     onComplete: () =>{
+        if(isAnimating){
+        const playBtn = lastCard.querySelector(".fa-play")
+        const pauseBtn = lastCard.querySelector(".fa-pause")
+
+        playBtn.style.display = "block"
+        pauseBtn.style.display = "none"
         isAnimating = false
+        }
     }
 })
 const f2 = gsap.timeline({
     onComplete: () =>{
+        if(isAnimating){
+        const playBtn = lastCard.querySelector(".fa-play")
+        const pauseBtn = lastCard.querySelector(".fa-pause")
+
+        playBtn.style.display = "block"
+        pauseBtn.style.display = "none"
         isAnimating = false
+        }
     }
 })
 const f3 = gsap.timeline({
     onComplete: () =>{
+        if(isAnimating){
+        const playBtn = lastCard.querySelector(".fa-play")
+        const pauseBtn = lastCard.querySelector(".fa-pause")
+
+        playBtn.style.display = "block"
+        pauseBtn.style.display = "none"
         isAnimating = false
+        }
     }
 })
 const f4 = gsap.timeline({
     onComplete: () =>{
+        if(isAnimating){
+        const playBtn = lastCard.querySelector(".fa-play")
+        const pauseBtn = lastCard.querySelector(".fa-pause")
+
+        playBtn.style.display = "block"
+        pauseBtn.style.display = "none"
         isAnimating = false
+        }
     }
 })
 const f5 = gsap.timeline({
     onComplete: () =>{
+        if(isAnimating){
+        const playBtn = lastCard.querySelector(".fa-play")
+        const pauseBtn = lastCard.querySelector(".fa-pause")
+
+        playBtn.style.display = "block"
+        pauseBtn.style.display = "none"
         isAnimating = false
+        }
     }
 })
 const f6 = gsap.timeline({
     onComplete: () =>{
+        if(isAnimating){
+        const playBtn = lastCard.querySelector(".fa-play")
+        const pauseBtn = lastCard.querySelector(".fa-pause")
+
+        playBtn.style.display = "block"
+        pauseBtn.style.display = "none"
         isAnimating = false
+        }
     }
 })
 
 // Declaring Variables
-const figure1 = document.querySelector(".figure-1")
-const figure2 = document.querySelector(".figure-2")
-const figure3 = document.querySelector(".figure-3")
-const figure4 = document.querySelector(".figure-4")
-const figure5 = document.querySelector(".figure-5")
-const figure6 = document.querySelector(".figure-6")
+const figure1 = document.querySelector(".figure-1").querySelector(".play-pause")
+const figure2 = document.querySelector(".figure-2").querySelector(".play-pause")
+const figure3 = document.querySelector(".figure-3").querySelector(".play-pause")
+const figure4 = document.querySelector(".figure-4").querySelector(".play-pause")
+const figure5 = document.querySelector(".figure-5").querySelector(".play-pause")
+const figure6 = document.querySelector(".figure-6").querySelector(".play-pause")
 
 // Making Functions
+
+function changePlayBtnState(){
+    const playBtn = this.querySelector(".fa-play")
+    const pauseBtn = this.querySelector(".fa-pause")
+
+    if(isAnimating){
+        playBtn.style.display = "none"
+        pauseBtn.style.display = "block"
+    }
+}
 
 function animateF1(){
     if(!isAnimating){
         isAnimating = true
+        lastCard = this
+        
+        changePlayBtnState.call(this)
 
         f1.from(".middle-line",{
             xPercent: -100,
@@ -265,7 +321,9 @@ function animateF1(){
 
 function animateF2(){
     if(!isAnimating){
-        isAnimating = "true"
+        isAnimating = true
+        lastCard = this
+        changePlayBtnState.call(this)
 
         f2.from(".line",{
             opacity: 0,
@@ -305,6 +363,8 @@ function animateF2(){
 function animateF3(){
     if(!isAnimating){
         isAnimating = true
+        lastCard = this
+        changePlayBtnState.call(this)
 
         f3.from(".line-down",{
             height: 0,
@@ -332,7 +392,39 @@ function animateF3(){
 }
 
 function animateF4(){
-f4.from(".human",{
+    if(!isAnimating){
+        isAnimating = true
+        lastCard = this
+        changePlayBtnState.call(this)
+
+        f4.from(".human",{
+            opacity: 0,
+            scale: 0,
+            duration: 1.4
+        })
+        
+        f4.from(".f4circle",{
+            opacity: 0,
+            scale: 0,
+            stagger: .4,
+            duration: 1
+        })
+        
+        f4.from(".speak, .listen",{
+            opacity:0,
+            duration: 1,
+            stagger: 1.3
+        })
+    }
+}
+
+function animateF5(){
+   if(!isAnimating){
+    isAnimating = true
+    lastCard = this
+    changePlayBtnState.call(this)
+
+    f4.from(".human",{
     opacity: 0,
     scale: 0,
     duration: 1.4
@@ -350,12 +442,6 @@ f4.from(".speak, .listen",{
     duration: 1,
     stagger: 1.3
 })
-}
-
-function animateF5(){
-
-   if(!isAnimating){
-    isAnimating = "true"
 
     f5.from(".half-circle",{
         opacity:0,
@@ -374,7 +460,9 @@ function animateF5(){
 
 function animateF6(){
 if(!isAnimating){
-    isAnimating = "true"
+    isAnimating = true
+    lastCard = this
+    changePlayBtnState.call(this)
     
         f6.from(".options-line",{
             scale:0,
@@ -448,9 +536,9 @@ for (let i = 0; i < options.length; i++){
 }
 
 // Cursor Follower
-
 // Declaring Variables
 const illustrations = Array.from(document.querySelectorAll(".illustration"))
+const playPause = document.querySelectorAll(".play-pause")
 const mail = document.querySelector(".contact > a")
 const socialLinksFooter = Array.from(document.querySelectorAll(".footer .fa-brands"))
 const socialLinksNav = Array.from(document.querySelectorAll("nav .fa-brands"))
@@ -479,7 +567,6 @@ function hideAction(){
 }
 
 function makeMagnet(e){
-console.log(e.offsetY)
 const x = e.offsetX
 const y = e.offsetY
 
@@ -490,22 +577,18 @@ const moveX = x - elemWidth
 const moveY = y - elemHeight
 
 this.style.transform = `translate(${moveX}px,${moveY}px)`
-console.log(moveX,moveY)
 }
 
 function removeMagnet(e){
     this.style.transform = `translate(0)`
 }
 
-illustrations.forEach(elem =>{
+playPause.forEach(elem =>{
     elem.addEventListener("mouseenter",(e)=>{
         isHovering = true
         
-        cursorFollower.textContent = "Play"
-        cursorFollower.style.height = "auto"
-        cursorFollower.style.width = "auto"
-        cursorFollower.style.padding = "4px 15px"
-        cursorFollower.style.borderRadius = "20px"
+        cursorFollower.style.height = "40px"
+        cursorFollower.style.width = "40px"
     })
     
     elem.addEventListener("mouseleave",(e)=>{
@@ -609,7 +692,6 @@ scaleCursor()
 window.addEventListener("mousemove",updateCursor)
 
 function toggleCursor(){
-    console.log("lol")
     if(window.matchMedia('(max-width:956px)').matches){
     cursorFollower.style.display = "none"
 } else{

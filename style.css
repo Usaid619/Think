@@ -321,6 +321,42 @@ border-bottom: 1px solid white;
     overflow: hidden;
 }
 
+.play-pause{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 3%;
+    right: 3%;
+    /* opacity: 0; */
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    transition: all .1s ease;
+}
+
+.play-pause:hover{
+    scale: 1.15;
+}
+
+.illustration:hover .play-pause{
+    opacity: 1;
+}
+
+.anim-btn{
+    fill: #E0D5D5;
+    font-size: 150%;
+}
+
+.fa-play{
+    margin: 0 0 0 15%;
+    /* display: none; */
+}
+
+.fa-pause{
+    display: none;
+}
+
 .quote{
     display: flex;
     align-items: center;
