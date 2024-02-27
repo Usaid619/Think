@@ -199,72 +199,48 @@ let lastCard = null
 const f1 = gsap.timeline({
     onComplete: () =>{
         if(isAnimating){
-        const playBtn = lastCard.querySelector(".fa-play")
-        const pauseBtn = lastCard.querySelector(".fa-pause")
-
-        playBtn.style.display = "block"
-        pauseBtn.style.display = "none"
-        isAnimating = false
+            isAnimating = false
+            changePlayBtnState()
         }
     }
 })
 const f2 = gsap.timeline({
     onComplete: () =>{
         if(isAnimating){
-        const playBtn = lastCard.querySelector(".fa-play")
-        const pauseBtn = lastCard.querySelector(".fa-pause")
-
-        playBtn.style.display = "block"
-        pauseBtn.style.display = "none"
-        isAnimating = false
+            isAnimating = false
+            changePlayBtnState()
         }
     }
 })
 const f3 = gsap.timeline({
     onComplete: () =>{
         if(isAnimating){
-        const playBtn = lastCard.querySelector(".fa-play")
-        const pauseBtn = lastCard.querySelector(".fa-pause")
-
-        playBtn.style.display = "block"
-        pauseBtn.style.display = "none"
-        isAnimating = false
+            isAnimating = false
+            changePlayBtnState()
         }
     }
 })
 const f4 = gsap.timeline({
     onComplete: () =>{
         if(isAnimating){
-        const playBtn = lastCard.querySelector(".fa-play")
-        const pauseBtn = lastCard.querySelector(".fa-pause")
-
-        playBtn.style.display = "block"
-        pauseBtn.style.display = "none"
-        isAnimating = false
+            isAnimating = false
+            changePlayBtnState()
         }
     }
 })
 const f5 = gsap.timeline({
     onComplete: () =>{
         if(isAnimating){
-        const playBtn = lastCard.querySelector(".fa-play")
-        const pauseBtn = lastCard.querySelector(".fa-pause")
-
-        playBtn.style.display = "block"
-        pauseBtn.style.display = "none"
-        isAnimating = false
+            isAnimating = false
+            changePlayBtnState()
         }
     }
 })
 const f6 = gsap.timeline({
     onComplete: () =>{
         if(isAnimating){
-        const playBtn = lastCard.querySelector(".fa-play")
-        const pauseBtn = lastCard.querySelector(".fa-pause")
-
-        playBtn.style.display = "block"
-        pauseBtn.style.display = "none"
-        isAnimating = false
+            isAnimating = false
+            changePlayBtnState()
         }
     }
 })
@@ -280,12 +256,15 @@ const figure6 = document.querySelector(".figure-6").querySelector(".play-pause")
 // Making Functions
 
 function changePlayBtnState(){
-    const playBtn = this.querySelector(".fa-play")
-    const pauseBtn = this.querySelector(".fa-pause")
+    const playBtn = lastCard.querySelector(".fa-play")
+    const pauseBtn = lastCard.querySelector(".fa-pause")
 
     if(isAnimating){
         playBtn.style.display = "none"
         pauseBtn.style.display = "block"
+    } else{
+        playBtn.style.display = "block"
+        pauseBtn.style.display = "none"
     }
 }
 
@@ -420,28 +399,9 @@ function animateF4(){
 
 function animateF5(){
    if(!isAnimating){
-    isAnimating = true
-    lastCard = this
-    changePlayBtnState.call(this)
-
-    f4.from(".human",{
-    opacity: 0,
-    scale: 0,
-    duration: 1.4
-})
-
-f4.from(".f4circle",{
-    opacity: 0,
-    scale: 0,
-    stagger: .4,
-    duration: 1
-})
-
-f4.from(".speak, .listen",{
-    opacity:0,
-    duration: 1,
-    stagger: 1.3
-})
+       isAnimating = true
+       lastCard = this
+       changePlayBtnState.call(this)
 
     f5.from(".half-circle",{
         opacity:0,
@@ -455,7 +415,6 @@ f4.from(".speak, .listen",{
         duration: 1.3
     })
    }
-
 }
 
 function animateF6(){
