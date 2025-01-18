@@ -285,7 +285,8 @@ function changePlayBtnState(){
 }
 
 function animateF1(){
-    if(!isAnimating){
+    if(isAnimating) return
+
         isAnimating = true
         lastCard = this
         
@@ -310,12 +311,13 @@ function animateF1(){
             stagger:1.3,
             opacity: 0,
         })
-    }
+    
 
 }
 
 function animateF2(){
-    if(!isAnimating){
+    if(isAnimating) return
+
         isAnimating = true
         lastCard = this
         changePlayBtnState.call(this)
@@ -352,11 +354,12 @@ function animateF2(){
             delay: .5,
             duration: 1
         })
-    }    
+    
 }
 
 function animateF3(){
-    if(!isAnimating){
+    if(isAnimating) return
+
         isAnimating = true
         lastCard = this
         changePlayBtnState.call(this)
@@ -383,11 +386,12 @@ function animateF3(){
             duration: 1,
             stagger: 1.1
         })
-    }
+    
 }
 
 function animateF4(){
-    if(!isAnimating){
+    if(isAnimating) return
+
         isAnimating = true
         lastCard = this
         changePlayBtnState.call(this)
@@ -410,11 +414,12 @@ function animateF4(){
             duration: 1,
             stagger: 1.3
         })
-    }
+    
 }
 
 function animateF5(){
-   if(!isAnimating){
+    if(isAnimating) return
+
        isAnimating = true
        lastCard = this
        changePlayBtnState.call(this)
@@ -430,11 +435,12 @@ function animateF5(){
         stagger: 1.3,
         duration: 1.3
     })
-   }
+   
 }
 
 function animateF6(){
-if(!isAnimating){
+    if(isAnimating) return
+    
     isAnimating = true
     lastCard = this
     changePlayBtnState.call(this)
@@ -457,7 +463,7 @@ if(!isAnimating){
             stagger:1.3,
             duration:2
             })
-}
+
 }
 
 // Adding Event Listeners
