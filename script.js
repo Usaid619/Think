@@ -64,18 +64,14 @@ function startLandingAnimation() {
         stagger: .5,
         ease:"ease"
     })    
-    .from(".hero-image",{
+    .from(".hero-image, .big-hero-image",{
         opacity:0,
         scale:0,
-        duration:1,
-        stagger:.3
-    })    
-    .from(".big-hero-image",{
-        opacity:0,
-        scale:0,
-        duration:1,
-        stagger:.3
-    })    
+        // duration:1,
+        stagger:{
+            each:0.1
+        }
+    },"-=0.6")      
     .from(".prompt",{
         scale:0,
         opacity:0,
@@ -208,8 +204,6 @@ function startLandingAnimation() {
         }
     }) 
 }
-
-
 
 const cursorFollower = document.querySelector(".cursor-follower")
 
