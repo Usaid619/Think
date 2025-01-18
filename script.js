@@ -1,86 +1,106 @@
+const tl = gsap.timeline()
 // GSAP ANIMATIONS
-(function() {
+function startLandingAnimation() {
     // Landing Page Animations
-    const tl = gsap.timeline()
+    gsap.set(".loader-text-container",{
+        autoAlpha:1
+    })
+    gsap.set(".title > .second, .title > .first",{
+        transformPerspective:800
+    })
      
     tl.to("#loader-text",{
         y: 0,
         duration:1.1,
-        delay:0.5,
+        // delay:0.5,
         rotate:0,
         ease: "ease-out"
     })
-    tl.from("#loader-text > span",{
+    .from("#loader-text > span",{
         opacity:0,
         duration: .4,
         ease:"linear"
     })
-    tl.to("#loader",{
+    .to("#loader",{
         top: "-100vh",
-        delay: 0.6,
+        // delay: 0.6,
         duration: 2,
         ease: Expo.easeInOut
-    })    
-    tl.from("nav",{
+    },">+0.6")    
+    .from("nav",{
         x:"-100%",
         opacity:0,
         duration:1.2,
         ease: "ease"
     })    
-    tl.from("nav > h3",{
+    .from("nav > h3",{
         x: -100,
         duration: .5,
         opacity:0,
         ease:"ease"
     })    
-    tl.from("nav > ul > li",{
+    .from("nav > ul > li",{
         x:"100%",
         duration: .5,
         opacity:0,
         stagger:.2,
         ease:"bounce"
     })    
-    tl.from("nav > h1 > a",{
+    .from("nav > h1 > a",{
         opacity:0,
         duration: .6,
         ease:"ease"
     })    
-    tl.from(".title",{
+    .from(".title",{
         scale:0,
         opacity:0,
         duration: .5,
         ease:"ease"
     })    
-    tl.from(".title > .second, .title > .first",{
-        y: -10,
-        transform: "rotateX(90deg)",
-        transformOrigin: "50% 0",
+    .from(".title > .second, .title > .first",{
+        rotationX: 90,
+        transformOrigin: "center top",
         duration: .9,
         stagger: .5,
         ease:"ease"
     })    
-    tl.from(".hero-image",{
+    .from(".hero-image",{
         opacity:0,
         scale:0,
         duration:1,
         stagger:.3
     })    
-    tl.from(".big-hero-image",{
+    .from(".big-hero-image",{
         opacity:0,
         scale:0,
         duration:1,
         stagger:.3
     })    
-    tl.from(".prompt",{
+    .from(".prompt",{
         scale:0,
         opacity:0,
     })  
-    tl.to(".prompt",{
+    .to(".prompt",{
         y: 20,
         repeat: -1,
         duration:0.7,
         yoyo: true,
     })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Illustrations Animations
     gsap.to(".introduction h2",{
@@ -187,7 +207,9 @@
             end: "30% 25%"
         }
     }) 
-})()
+}
+
+
 
 const cursorFollower = document.querySelector(".cursor-follower")
 
@@ -660,3 +682,4 @@ function toggleCursor(){
 
 window.addEventListener("resize",toggleCursor)
 
+window.addEventListener("load",startLandingAnimation)

@@ -112,6 +112,7 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     margin-bottom: 50px;
+    visibility: hidden;
 /* border: 2px solid black; */
 overflow: hidden;
 }
@@ -200,12 +201,13 @@ border-bottom: 1px solid white;
     border-radius: 40px;
     padding: 20px;
     text-align: center;
+    /* perspective: 600px; */
 }
 
 .title > h1{
     font-size: clamp(26px,7vw,90px);
     letter-spacing: 7px;
-    transform-origin: top;
+    /* transform-origin: top; */
 }
 
 .hero-image{
